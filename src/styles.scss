@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.headerFont {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  // height: 30px; /* Set the height of the container (adjust as needed) */
+  /* Optionally, add any additional styles you need for the container */
+}

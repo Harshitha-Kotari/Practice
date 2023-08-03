@@ -1,0 +1,34 @@
+<div id="mySidenav" class="sidenav" #mySidenav>
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="loggedin/calci" (click)="closeNav()">Calculator</a>
+    <a [routerLink]="['/loggedin/home']" [queryParams]="{ functionName: 'snackBarFuncCall'}" (click)="closeNav()">Add
+        User
+        Details</a>
+    <a [routerLink]="['/loggedin/calci']" (click)="closeNav()">Edit User Details</a>
+    <a href="loggedin/home">Delete User Details</a>
+    <a [routerLink]="['/loggedin/home', 'snackBarFuncCall']" (click)="closeNav()">Add Details</a>
+</div>
+<div class="row m-0 p-0">
+    <div class="col-4 m-0 p-0">
+        <div id="main" #mainnav>
+            <span style="font-size:20px;cursor:pointer" (click)="openNav()">&#9776; Menu</span>
+        </div>
+    </div>
+    <div class="col-2 m-0 p-0">
+        <a [routerLink]="['/loggedin/home']">
+            <i class="fas fa-home" aria-hidden="true">i</i>
+            <fa-icon icon="film"></fa-icon>
+            <fa-icon icon="fish"></fa-icon>
+        </a>
+    </div>
+    <div class="col-6 m-0 p-0 text-end fs-5 fw-bold">
+        <div class="headertable w-100 ">
+            <div class="header headerFont">
+                {{ currentDate | date:'dd-MM-yyyy HH:mm:ss' }}
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+
+</div>

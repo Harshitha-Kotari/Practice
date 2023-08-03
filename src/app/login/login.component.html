@@ -1,0 +1,52 @@
+<div class="container-fluid d-block mx-auto loginComponent">
+    <div class="row col-md-4 offset-md-4 mt-5 pb-5" style="border: 1px solid #198754;border-radius:15px;">
+        <div class="row m-0 p-0"
+            style="background-color: #f5f2f2; border-top-right-radius:15px;border-top-left-radius:15px;">
+            <div class="col-md-12 m-0 p-3">
+                <div class="row m-0 p-0">
+                    <div class="col-2 m-0 p-0">
+                        <img loading="eager" src='assets/starbucks.png' width="30" height="30"
+                            class="d-block mx-auto" />
+                    </div>
+                    <div class="col-8  m-0 p-0">
+                        <div style="display: table;height: 100%;">
+                            <div class="headerName themeTextColor">
+                                HNK Systems
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-3 " style="border-top:1px solid #198754;"></div>
+        <div class="row col-md-10 offset-md-1">
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <button mat-icon-button matPrefix class="icon">
+                    <mat-icon>account_circle</mat-icon>
+                </button>
+                <input matInput placeholder="Enter your Username" [formControl]="frm_username" required>
+                <mat-error *ngIf="frm_username.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="row col-md-10 offset-md-1">
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <button mat-icon-button matPrefix class="icon">
+                    <!-- <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon> -->
+                    <mat-icon>lock</mat-icon>
+                </button>
+                <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter Password"
+                    [formControl]="frm_password" required>
+                <button mat-icon-button matSuffix class="icon" (click)="hide = !hide"
+                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="frm_password.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="row col-md-4 offset-md-4 pt-3">
+            <button class="btn btn-outline-success" type="submit" (click)="loginFunction()">Login</button>
+        </div>
+    </div>
+</div>

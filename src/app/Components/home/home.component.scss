@@ -1,0 +1,20 @@
+@import 'src/styleVariables';
+
+.header {
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bolder;
+    color: #fff;
+    font-family: cursive;
+}
+
+.headertable {
+    display: table;
+    height: 100%;
+}
+
+.logout {
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 15px;
+}
